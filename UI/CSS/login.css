@@ -1,19 +1,50 @@
 
-body {
-    background-color: blue;
-    margin: 0;
-    display: flex;
-    border: solid;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, .5);
-    
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+* {
+    box-sizing: border-box;
 }
-container > *{
-    display: flex;
-    justify-content: center;
-    
+body {
+    margin: 0;
+}
+.grid-container{
+    display: grid;
+    margin: 0;
+    height: 97vh;
+    background-color: #Fab3cA;
+    grid-template-columns: 15% 15% 40% 15% 15% ;
+    grid-template-rows: auto auto auto auto auto auto;
+
+    padding: 10px;
     
 }
 
+.card{
+    display: flex;
+    grid-area: 2 / 3 / 5 / 4;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    justify-content: center;
+    
+    
+    border-radius: 8px;
+    
+}
+
+.form {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    background-color: #2196F3;
+    grid-gap: 10px;
+    margin: 10px;
+    border: solid;
+    align-content: center;
+}
+.form > div {
+    background-color: beige;
+    padding: 10px;
+}
+
+.copyright-info {
+    grid-area: 6 / 1 / 7 / 4;
+    
+}
