@@ -1,0 +1,40 @@
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    background-color: coral;
+
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(4, 25%);
+    grid-template-columns: repeat(5, 20%);
+    height: 100vh;
+    
+}
+
+.main { 
+    display: grid;
+    grid-area: 1 / 1 / 6 / 4;
+    align-content: center;
+
+}
+
+.aside { 
+    display: grid;
+    grid-area: 1 / 4 / 4 / 6;
+    grid-template-columns: 20% 60% 20%
+}
+
+.form {
+    background-color: wheat;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
