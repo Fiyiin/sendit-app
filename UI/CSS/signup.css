@@ -22,8 +22,6 @@ body {
 .main { 
     display: grid;
     grid-area: 1 / 1 / 6 / 4;
-    border: solid;
-    border-color: blue;
     align-content: center;
 
 }
@@ -31,7 +29,6 @@ body {
 .aside { 
     display: grid;
     grid-area: 1 / 4 / 4 / 6;
-    border: solid; 
     grid-template-columns: 20% 60% 20%
 }
 
