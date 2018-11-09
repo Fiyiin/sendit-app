@@ -34,6 +34,15 @@ class Parcel {
   getAll() {
     return this.parcels;
   }
+
+  /**
+  *
+  * @param {uuid} id
+  * @returns {object} parcel object
+  */
+  getOne(id) {
+    return this.parcels.find(parcel => parcel.id === id);
+  }
 }
 
 export default new Parcel();
