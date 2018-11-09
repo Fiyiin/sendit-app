@@ -20,8 +20,19 @@ const Parcel = {
     if (!req.body.weight) {
       return res.status(400).send({ message: 'weight isrequired' });
     }
-    // const parcel = ParcelModel.create(req.body);
-    return res.status(201).send({ message: 'new parcel order' });
+    const parcel = ParcelModel.create(req.body);
+    return res.status(201).send(parcel);
+  },
+
+  /**
+   *
+   * @param {object} req
+   * @param {object} res
+   * @param {object} orders array
+   */
+  getAll(req, res) {
+    const parcels = ParcelModel.getAll();
+    return res.status(200).send(parcels);
   },
 
 };
