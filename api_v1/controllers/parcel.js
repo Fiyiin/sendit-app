@@ -5,15 +5,23 @@ const Parcel = {
    *
    * @param {object} req
    * @param {object} res
-   * @returns {object} Sendit object
+   * @returns {object} Parcel object
    */
   create(req, res) {
-    if (!req.body.name && !req.body.weight && !req.body.pickup
-      && !req.body.delivery) {
-      return res.status(400).send({ message: 'All fields are required' });
+    if (!req.body.name) {
+      return res.status(400).send({ message: 'package name is required' });
     }
-    const order = ParcelModel.create(req.body);
-    return res.status(201).send(order);
+    if (!req.body.pickup) {
+      return res.status(400).send({ message: 'pickup location is required' });
+    }
+    if (!req.body.delivery) {
+      return res.status(400).send({ message: 'delivery location is required' });
+    }
+    if (!req.body.weight) {
+      return res.status(400).send({ message: 'weight isrequired' });
+    }
+    // const parcel = ParcelModel.create(req.body);
+    return res.status(201).send({ message: 'new parcel order' });
   },
 
 };

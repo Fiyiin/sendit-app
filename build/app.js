@@ -1,29 +1,35 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
 
-var _express = _interopRequireDefault(require("express"));
+var _express = require('express');
 
-var _morgan = _interopRequireDefault(require("morgan"));
+var _express2 = _interopRequireDefault(_express);
 
-var _path = _interopRequireDefault(require("path"));
+var _morgan = require('morgan');
 
-var _sendit = _interopRequireDefault(require("../api_v1/controllers/sendit"));
+var _morgan2 = _interopRequireDefault(_morgan);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+var _path = require('path');
 
-var app = (0, _express["default"])();
-app.use((0, _morgan["default"])('dev'));
-app.use(_express["default"].json());
-app.post('/api/v1/orders', _sendit["default"].create);
-app.get('/api/v1/orders', _sendit["default"].getAll);
-app.get('/api/v1/orders/:id', _sendit["default"].getOne);
-app.get('/api/v1/orders/:username', _sendit["default"].getUser);
-app.put('/api/v1/orders/:id', _sendit["default"].cancel);
+var _path2 = _interopRequireDefault(_path);
+
+var _parcel = require('./api_v1/controllers/parcel');
+
+var _parcel2 = _interopRequireDefault(_parcel);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var app = (0, _express2.default)();
+
+app.use((0, _morgan2.default)('dev'));
+app.use(_express2.default.json());
+
+app.post('/api/v1/parcels', _parcel2.default.create);
+
 app.listen(3000);
 console.log('app running on port', 3000);
-var _default = app;
-exports["default"] = _default;
+
+exports.default = app;
