@@ -62,4 +62,16 @@ describe('API tests', () => {
         });
     });
   });
-})
+
+  describe('#PUT api/v1/parcel/:id', () => {
+    it('Cancels the parcel delivery order with the given id', (done) => {
+      supertest(app)
+        .put('/api/v1/parcel/', +parcel.id)
+        .end((err, res) => {
+          expect(res.statusCode).to.equal(204);
+          expect(res.body).to.equal({});
+          done();
+        });
+    });
+  });
+});
