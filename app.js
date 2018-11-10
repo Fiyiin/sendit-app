@@ -19,8 +19,4 @@ app.get('/api/v1/parcels', Parcel.getAll);
 app.get('/api/v1/parcel/:id', Parcel.getOne);
 app.put('/api/v1/parcel/:id', Parcel.cancel);
 
-
-app.listen(3000);
-console.log('app running on port', 3000);
-
 export default app;

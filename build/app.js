@@ -38,7 +38,4 @@ app.get('/api/v1/parcels', _parcel2.default.getAll);
 app.get('/api/v1/parcel/:id', _parcel2.default.getOne);
 app.put('/api/v1/parcel/:id', _parcel2.default.cancel);
 
-app.listen(3000);
-console.log('app running on port', 3000);
-
 exports.default = app;
