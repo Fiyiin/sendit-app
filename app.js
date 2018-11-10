@@ -10,6 +10,7 @@ app.use(express.json());
 
 app.post('/api/v1/parcels', Parcel.create);
 app.get('/api/v1/parcels', Parcel.getAll);
+app.get('/api/v1/parcel/:id', Parcel.getOne);
 
 
 app.listen(3000);

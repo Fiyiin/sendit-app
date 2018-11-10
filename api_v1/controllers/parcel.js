@@ -35,6 +35,20 @@ const Parcel = {
     return res.status(200).send(parcels);
   },
 
+  /**
+   *
+   * @param {object} req
+   * @param {object} res
+   * @return {object} returns order object
+   */
+  getOne(req, res) {
+    const parcel = ParcelModel.getOne(req.params.id);
+    if (!parcel) {
+      return res.status(404).send({ message: 'parcel not found' });
+    }
+    return res.status(200).send(parcel);
+  },
+
 };
 
 export default Parcel;
