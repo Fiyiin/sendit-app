@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, './UI/')));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, './UI/public/index.html'));
+  res.sendFile(path.join(__dirname, './ui/public/index.html'));
 });
 
 app.post('/api/v1/parcels', Parcel.create);
