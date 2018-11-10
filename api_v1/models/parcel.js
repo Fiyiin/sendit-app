@@ -11,7 +11,7 @@ class Parcel {
 
   /**
    *
-   * @returns {oblect} order object
+   * @returns {oblect} parcel object
    */
   create(data) {
     const newParcel = {
@@ -26,6 +26,13 @@ class Parcel {
     };
     this.parcels.push(newParcel);
     return newParcel;
+  }
+
+  /**
+   * @returns {object} returns all parcel orders
+   */
+  getAll() {
+    return this.parcels;
   }
 }
 
