@@ -49,6 +49,21 @@ const Parcel = {
     return res.status(200).send(parcel);
   },
 
+  /**
+ *
+ * @param {object} req
+ * @param {object} res
+ * @returns {void} return status code 204
+ */
+  cancel(req, res) {
+    const order = ParcelModel.getOne(req.params.id);
+    if (!order) {
+      return res.status(404).send({ message: 'parcel not found ' });
+    }
+    const id = ParcelModel.cancel(req.params.id);
+    return res.status(204).send(id);
+  },
+
 };
 
 export default Parcel;

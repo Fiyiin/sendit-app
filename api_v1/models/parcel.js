@@ -43,6 +43,17 @@ class Parcel {
   getOne(id) {
     return this.parcels.find(parcel => parcel.id === id);
   }
+
+  /**
+   *
+   * @param {uuid} id
+   */
+  cancel(id) {
+    const parcel = this.getOne(id);
+    const index = this.parcels.indexOf(parcel);
+    this.parcels.splice(index, 1);
+    return {};
+  }
 }
 
 export default new Parcel();
