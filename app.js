@@ -4,6 +4,7 @@ import path from 'path';
 import Parcel from './api_v1/controllers/parcel';
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -20,7 +21,6 @@ app.get('/api/v1/parcel/:id', Parcel.getOne);
 app.put('/api/v1/parcel/:id', Parcel.cancel);
 
 
-app.listen(process.env.PORT || 3000);
-console.log('app running on port');
+app.listen(port, () => console.log(`app running on ${port}`));
 
 export default app;
