@@ -19,4 +19,8 @@ app.get('/api/v1/parcels', Parcel.getAll);
 app.get('/api/v1/parcel/:id', Parcel.getOne);
 app.put('/api/v1/parcel/:id', Parcel.cancel);
 
+
+app.listen(process.env.PORT || 3000);
+console.log('app running on port');
+
 export default app;
