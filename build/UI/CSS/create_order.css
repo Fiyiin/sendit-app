@@ -1,0 +1,29 @@
+
+body {
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+}
+
+.middle-column{
+    box-shadow: 8px rgba(0, 0, 0, 0.5);
+    display: grid;
+    background-color: cornsilk;
+    height: 100vh;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-template-rows: 20% 80%
+    
+    
+}
+.welcome {
+    text-align: center;
+}
+
+.order-form {
+    text-align: center;
+}

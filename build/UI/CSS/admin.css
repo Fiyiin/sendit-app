@@ -1,0 +1,74 @@
+
+body {
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 12% 88%
+}
+
+
+.navbar {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #333;
+   
+}
+
+.navbar a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#signout {
+    border-radius: 25px;
+    background-color: white;
+    color: gray;
+    border: 2px solid #e7e7e7;
+}
+
+main {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 12% 88%;
+    align-content: center;
+}
+
+main > table {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+    border-radius: 4px;
+}
+
+#adm-table{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#adm-table td, #adm-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#adm-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#adm-table tr:hover {background-color: #ddd;}
+
+#adm-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
