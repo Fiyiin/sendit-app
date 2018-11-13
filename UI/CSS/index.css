@@ -1,15 +1,20 @@
-
 * {
     box-sizing: border-box;
 }
 
 body {
+    background-image: url(../images/joanna-kosinska-669797-unsplash.jpg);
+    background-size: contain;
     margin: 0;
 }
 
+h2 {
+    color: #98683A;
+    font-size: 38px;
+}
 .topnav {
     overflow: hidden;
-    background-color: white;
+
 }
 
 .topnav button {
@@ -37,7 +42,7 @@ body {
 }
 #login {
     border-radius: 25px;
-    background-color: white;
+
     color: gray;
     border: 2px solid #e7e7e7;
 }
@@ -48,13 +53,11 @@ body {
 
 .content {
     text-align: center;
-    background-color: #ddd;
     padding: 10px;
     height: 80vh;
 }
 
 .footer {
-    background-color: palegoldenrod;
     height: 13vh;
     padding: 10px;
 }

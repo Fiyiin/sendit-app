@@ -4,9 +4,9 @@
   "description": "a courier service that helps users deliver parcels to different destinations.",
   "main": "./build/app.js",
   "scripts": {
-    "start": "babel-node app.js --presets env",
-    "test": "mocha --compilers js:babel-core/register",
-    "build": "babel app.js -d build",
+    "start": "node ./build/app.js --presets env",
+    "test": "npm run build && mocha ./build/test/*.js --exit 1",
+    "build": "babel lib -d build",
     "dev-start": "babel-watch app.js"
   },
   "repository": {
