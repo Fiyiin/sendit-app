@@ -16,7 +16,7 @@ var _path = require('path');
 
 var _path2 = _interopRequireDefault(_path);
 
-var _parcel = require('./controllers/parcel');
+var _parcel = require('./routes/parcel');
 
 var _parcel2 = _interopRequireDefault(_parcel);
 
@@ -34,10 +34,7 @@ app.get('/', function (req, res) {
   res.sendFile(_path2.default.join(__dirname, 'UI', 'public', 'index.html'));
 });
 
-app.post('/api/v1/parcels', _parcel2.default.create);
-app.get('/api/v1/parcels', _parcel2.default.getAll);
-app.get('/api/v1/parcel/:id', _parcel2.default.getOne);
-app.put('/api/v1/parcel/:id', _parcel2.default.cancel);
+app.use('/api/v1/parcels', _parcel2.default);
 
 app.listen(port, function () {
   return console.log('app running on ' + port);
