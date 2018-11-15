@@ -1,4 +1,7 @@
 # SendIT
+
+[![Build Status](https://travis-ci.com/Fiyiin/sendit-app.svg?branch=develop)](https://travis-ci.com/Fiyiin/sendit-app)
+
 https://fiyiin.github.io/sendit-app/UI/public/index.html
 
 SendIT is a courier service that helps users deliver parcels to different destinations. 
@@ -30,6 +33,7 @@ npm
 - Mocha
 - Supertest
 - Chai
+- ES6
 
 ---
 
