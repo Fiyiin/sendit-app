@@ -1,3 +1,7 @@
+body {
+    background: url(../images/desktop.png) no-repeat center fixed; 
+    background-size: contain;
+}
 
 * {
     box-sizing: border-box;
@@ -5,16 +9,44 @@
 
 body {
     margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+.content {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 10% 55% 35%;
+    grid-template-rows: 20% 65% 15%;
+    height: 80vh;
+}
+#wel-header{
+    
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    font-size: 48px;
+    align-self: start;
+    color: #a4303f;
 }
 
+#wel-text1{
+    color: #0f0722;
+    font-size: 20px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    align-self: center;
+    padding-top: 20px;
+}
 .topnav {
     overflow: hidden;
-    background-color: white;
+    background-color: #0f0722;
 }
 
 .topnav button {
 
-        background-color: #4CAF50; /* Green */
+        background-color: #251351;
         float: right;
         border: none;
         color: white;
@@ -44,17 +76,4 @@ body {
 .topnav a:hover {
     background-color: #ddd;
     
-}
-
-.content {
-    text-align: center;
-    background-color: #ddd;
-    padding: 10px;
-    height: 80vh;
-}
-
-.footer {
-    background-color: palegoldenrod;
-    height: 13vh;
-    padding: 10px;
 }
