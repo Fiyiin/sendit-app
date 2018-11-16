@@ -4,36 +4,34 @@
 }
 body {
     margin: 0px;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     text-align: center;
     background-color: white;
 
 
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 15% 15% 20% 20% 30%;
-    grid-template-rows: repeat(4, 25%);
-    height: 100vh;
-    
+.content {
+display: grid;
+grid-template-areas: 'myArea myArea . . ';
+grid-gap: 10px;
+padding: 10px;
 }
 
-.main { 
-    grid-area: 1 / 1 / 4 / 4;
-    align-content: center;
-    font-family: 'Courier New', Courier, monospace;
+main {
+grid-area: myArea;
+display: grid;
+grid-template-rows: auto auto auto;
+  }
+
+main > div {
+    font-family: 'Ubuntu', 'sans-sefif';
+    color: #0f0722;
     font-size: 28px;
-    color: #251351;
-    font-weight: bold;
-    padding: 15px;
-
+    grid-row-start: 2;
+    grid-row-end: 3;
+    align-self: center;
 }
-
-.aside { 
-    grid-area: 1 / 4 / 4 / 6;
-}
-
 .form {
     border-radius: 5px;
     background-color: #a4303f;
@@ -85,7 +83,7 @@ input[type=password], select {
 }
 input[type=submit] {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: #251351;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -95,5 +93,5 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #a4303f;
 }
