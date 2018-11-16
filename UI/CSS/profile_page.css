@@ -8,15 +8,16 @@ body {
 
 .content {
     display: grid;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 15% 10% 75%;
     grid-template-columns: 35% 70%;
     grid-template-areas: 
-    'navbar navbar navbar''section main main';
+    'navbar navbar navbar''new new new''section main main';
 }
 
 .navbar {
     grid-area: navbar;
     background-color: #333;
+    width: 100vw;
 }
 
 .navbar a {
@@ -42,7 +43,9 @@ section {
 }
 
 main {
-    grid-area: main;   
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 10% 70% 20%;  
 }
 
 .profile-card {
@@ -52,7 +55,40 @@ main {
     margin-left: 20px;
     text-align: center;
 }
+.parcel-card{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-rows: 25% 50% 25%;
+    min-width: 150px;
+    height: 135px;        
+    border: 1px solid #EF9A9A;
+    border-radius: 4px;
+    overflow: hidden; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+    margin-top: 25px;
+}
+.card-header{
+    display: grid;
+    background-color: aqua
+}
+.card-body{
 
+    background-color: #e7e7e7
+}
+.card-footer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: aqua
+}
+#cancel{
+    align-self: center;
+    justify-self: center;
+}
+#loc{
+    align-self: center;
+    justify-self: center;
+}
 #email-ad {
     color: grey;
     font-size: 18px;
@@ -73,6 +109,25 @@ main {
     cursor: pointer;
     width: 100%;
     font-size: 18px;
+}
+.new{
+    width: 100vw;
+    justify-self: end;
+}
+#btn-new {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 12px;
+    
 }
 
 a {

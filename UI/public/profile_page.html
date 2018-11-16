@@ -14,31 +14,35 @@
         <nav class="navbar">
             <a href="../public/index.html"><button id="signout" title="LOGIN" onclick="">SIGNOUT</button></a>
         </nav>
+        <div class="new"> <button id="btn-new">NEW</button></div>
         <section>
             <div class="profile-card">
+                <div></div>
                 <h1>John Doe</h1>
                 <p id="email-ad">johndoe @ johnny.com</p>
                 <p class="p-card">6 Successful Orders</p>
                 <p class="p-card">0 In transit</p>
                 <p><a href="../public/create_order.html"><button class="btn-profile-card">Create New Order</button></a></p>
                 <p><a href="../public/manage_orders.html"><button class="btn-profile-card">Manage Orders</button></a></p>
-                <p><a href="../public/admin.html"><button class="btn-profile-card">ADMIN</button></a></p>
             </div>
         </section>
         <main>
             <div class="parcel-card">
-                <div class="parcl-dtl">
-                    <h3>Title</h3> <span>Created: 24, Aug, 2018</span>
-                    <hr>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-                        velit,
-                        sed quia non numquam
-                    </p>
-                    <hr>
-                    <span>Status: TRANSIT</span>
-                    <button>CANCEL</button>
-                    <button>CHANGE LOCATION</button>
+                <div class="card-header">
+                    <span>Title</span>
+                    <span>Created On</span>
+                    <span>Status: IN TRANSIT</span>
                 </div>
+                <div class="card-body">
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                    velit,
+                    sed quia non numquam
+                </div>
+                <div class="card-footer">
+                    <a id="cancel" href="#">Cancel</a> 
+                    <a id="loc" href="#">Change Location</a>
+                </div>
+
             </div>
         </main>
     </div>
