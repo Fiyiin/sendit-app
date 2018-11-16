@@ -16,7 +16,7 @@ body {
 
 .navbar {
     grid-area: navbar;
-    background-color: #333;
+    background-color: #0f0722;
     width: 100vw;
 }
 
@@ -62,7 +62,7 @@ main {
     grid-template-rows: 25% 50% 25%;
     min-width: 150px;
     height: 135px;        
-    border: 1px solid #EF9A9A;
+    border: 1px solid #251351;
     border-radius: 4px;
     overflow: hidden; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
@@ -70,7 +70,8 @@ main {
 }
 .card-header{
     display: grid;
-    background-color: aqua
+    background-color: #251351;
+    color: white;
 }
 .card-body{
 
@@ -79,7 +80,8 @@ main {
 .card-footer{
     display: grid;
     grid-template-columns: 50% 50%;
-    background-color: aqua
+    background-color: #251351;
+    color: white
 }
 #cancel{
     align-self: center;
@@ -99,12 +101,13 @@ main {
     line-height: 1.4rem;
 }
 .btn-profile-card {
+    max-width: 150px;
     border: none;
     outline: 0;
     display: inline-block;
     padding: 8px;
     color: white;
-    background-color:green;
+    background-color: #251351;
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -133,7 +136,7 @@ main {
 a {
     text-decoration: none;
     font-size: 22px;
-    color: black;
+    color: white;
 }
 
 button:hover, a:hover {
