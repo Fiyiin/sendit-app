@@ -1,95 +1,147 @@
 body{
 	margin:0;
-	background: white;
+	padding: 0;
+	background-color: white;
+	width: 100%;
   font-family: 'Source Sans Pro', sans-serif;
-	color: white;
 	font-weight: 300;
-}
-*{box-sizing:border-box}
-
-a{color:inherit;text-decoration:none}
-
-.login-wrap{
-	width:100%;
-	margin:auto;
-	max-width:525px;
-	min-height:670px;
-	position:relative;
-	background: white;
-	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
-}
-.login-html{
-	width:100%;
-	height:100%;
-	position:absolute;
-	padding:90px 70px 50px 70px;
-	background:#0f0722;
-}
-.login-html .sign-in-htm{
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-	position:absolute;
-
-}
-.login-html .sign-in,
-.login-form .group .check{
-	display:none;
-}
-.login-html .tab,
-.login-form .group .label,
-.login-form .group .button{
-	text-transform:uppercase;
-}
-.login-html .tab{
-	font-size:22px;
-	margin-right:15px;
-	padding-bottom:5px;
-	margin:0 15px 10px 0;
-	display:inline-block;
-	border-bottom:2px solid transparent;
-}
-.login-html .sign-in:checked + .tab{
-	color:white;
-	border-color:#a4303f;
-}
-.login-form{
-	min-height:345px;
-	position:relative;
-}
-.login-form .group{
-	margin-bottom:15px;
-}
-.login-form .group .label,
-.login-form .group .input,
-.login-form .group .button{
-	width:100%;
-	color:white;
-	display:block;
-}
-.login-form .group .input,
-.login-form .group .button{
-	border:none;
-	padding:15px 20px;
-	border-radius:4px;
-	background:rgba(255,255,255,.1);
+	font-size: 16px;
+	height: 100vh;
+	color: #4a4a4a;
+	overflow: hidden;
 }
 
-.login-form .group .label{
-	color:white;
-	font-size:12px;
-}
-.login-form .group .button{
-	background:#7d6ca7;
+div.login-wrap{
+	background-color: blue;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	z-index: 100;
+	min-width: 100%;
+	min-height: 100%;
 }
 
-
-.hr{
-	height:2px;
-	margin:60px 0 50px 0;
-	background: white;
+#login-screen {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+	overflow: hidden;
 }
-.foot-lnk{
-	text-align:center;
+
+.logo-content-box {
+	width: 90%;
+	max-width: 400px;
+	margin-top: 40px;
+}
+
+.logo-content-box > div {
+	padding: 30px;
+	background-color: #fff;
+	border-radius: 4px;
+	box-sizing: border-box;
+	box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3)
+}
+
+.logo-content-box > div .logo{
+	display: block;
+	margin: 0 auto 26px auto;
+	width: 75%;
+	height: auto;
+}
+
+div.login-wrap #login-screen form {
+	padding: 0;
+}
+
+form::before, form::after {
+	content: "";
+	display: table;
+}
+
+div.login-wrap #login-screen form .login-username,
+div.login-wrap #login-screen form .login-password {
+	margin-bottom: 15px;
+}
+
+div.input {
+	height: 47px;
+	width: 100%;
+	border-radius: 6px;
+	border: 1px solid #d7d7d7;
+	outline: none;
+	box-shadow: inset 0 7px 8px -8px rgba(0, 0, 0, 0.13);
+	background: #fff;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+div.input input, div.textarea input,
+div.input textarea, div.textarea textarea {
+	border-radius: 6px;
+	font-family: inherit;
+	padding: 0 12px;
+	border: 0;
+	position: relative;
+	width: 100%;
+	outline: none;
+	background: transparent;
+	height: 45px;
+	font-size: inherit;
+}
+
+div.input label {
+	font-size: 067em;
+	display: none;
+	color: #a0a0a0;
+}
+
+div.login-wrap #login-screen form > div:last-of-type 
+button.button {
+	background: #6fba26 url() no-repeat right 35px center;
+	background-size: 11px 20px;
+	height: 50px;
+	width: 100%;
+	margin: 30px auto 24px auto;
+	color: #fff;
+	border: 0;
+	display: block;
+	text-align: center;
+	padding: 0;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-family: inherit;
+	border-radius: unset;
+}
+
+div.login-wrap #login-screen form > 
+div:last-of-type > p {
+	font-size: 14px;
+	margin-top: 20px;
+	text-align: center;
+}
+
+footer.footer{
+	z-index: 600;
+	height: 100px;
+	background-color: transparent;
+	font-size: 14px;
+	width: 100%;
+	overflow: hidden;
+	color: black;
+}
+
+@media only screen and (min-width: 768px)
+{
+	footer.footer{
+	padding: 30px 40px 0 40px;
+}
+}
+
+@media only screen and (min-width: 320px){
+	footer.footer{
+		text-align: center
+	}
 }
