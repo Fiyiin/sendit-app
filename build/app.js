@@ -16,9 +16,9 @@ var _path = require('path');
 
 var _path2 = _interopRequireDefault(_path);
 
-var _parcel = require('./routes/parcel');
+var _index = require('./withDB/routes/index');
 
-var _parcel2 = _interopRequireDefault(_parcel);
+var _index2 = _interopRequireDefault(_index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34,7 +34,7 @@ app.get('/', function (req, res) {
   res.sendFile(_path2.default.join(__dirname, 'UI', 'public', 'index.html'));
 });
 
-app.use('/api/v1/parcels', _parcel2.default);
+app.use('/api/v1/parcels', _index2.default);
 
 app.listen(port, function () {
   return console.log('app running on ' + port);
