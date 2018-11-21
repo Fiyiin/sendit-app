@@ -3,9 +3,9 @@ CREATE DATABASE sendit_testdb;
 
 \c sendit_testdb;
 
-CREATE TABLE IF NOT EXISTS
+CREATE TABLE
 users(
-  id UUID PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   first_name TEXT NOT NULL,
   last_name TEXT NOT NULL,
   email VARCHAR(100) UNIQUE NOT NULL,
