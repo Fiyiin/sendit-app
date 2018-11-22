@@ -41,10 +41,6 @@ app.use(_bodyParser2.default.urlencoded({ extended: true }));
 
 app.use(_express2.default.static(_path2.default.join(__dirname, 'UI')));
 
-app.get('/*', (req, res) => {
-  res.sendFile(_path2.default.join(__dirname, 'UI', 'public', 'index.html'));
-});
-
 app.use('/api/v1/parcels', _parcels2.default);
 app.use('/api/v1/auth', _users2.default);
 
