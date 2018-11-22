@@ -12,7 +12,7 @@ body {
 .navbar {
     grid-row-start: 1;
     grid-row-end: 2;
-    background-color: #333;
+    background-color: #0f0722;
    
 }
 
@@ -51,14 +51,18 @@ main > table {
 }
 
 #adm-table{
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
+    overflow: auto;
+    font-family: "Ubuntu", "Verdana", "Arail", sans-serif;
+    padding: 30px;
+    border: 1px solid #DCDCDC;
+    text-align: center;
     width: 100%;
 }
 
 #adm-table td, #adm-table th {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 20px;
 }
 
 #adm-table tr:nth-child(even){background-color: #f2f2f2;}
@@ -69,6 +73,19 @@ main > table {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #4CAF50;
+    background-color: #a4303f;
     color: white;
+}
+[contenteditable]:after{
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  content: ' ' ;
+}
+[contenteditable]:hover:after{
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAiUlEQVQ4y2NgGFKgs7OTl2zNEyZMmAgEDZMmTeogWTNQUwVQcyeIDaLnz5/PQYrmssmTJ1sC6QQg7gXiFlI0l4I0Q9lOQNuLiNYMVFwCxFZQtiPQgEKSNAM1WMM0k2wzTDPQ+Q5AdjEpfs6CRRPJmqEGvAC6IAlId4NcQk58vwDih0DbMxhGDgAAx6ZVXMd4yEMAAAAASUVORK5CYII=')
+}
+[contenteditable]:focus:after{
+  width: 0;
+  content: ''
 }

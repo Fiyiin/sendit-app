@@ -1,47 +1,95 @@
+body{
+	margin:0;
+	background: white;
+  font-family: 'Source Sans Pro', sans-serif;
+	color: white;
+	font-weight: 300;
+}
+*{box-sizing:border-box}
 
-* {
-    box-sizing: border-box;
-}
-body {
-    margin: 0;
-}
-.grid-container{
-    display: grid;
-    margin: 0;
-    height: 97vh;
-    background-color: #bdf3ae;
-    grid-template-columns: 15% 15% 40% 15% 15% ;
-    grid-template-rows: auto auto auto auto auto auto;
+a{color:inherit;text-decoration:none}
 
-    padding: 10px;
-    
+.login-wrap{
+	width:100%;
+	margin:auto;
+	max-width:525px;
+	min-height:670px;
+	position:relative;
+	background: white;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.login-html{
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:90px 70px 50px 70px;
+	background:#0f0722;
+}
+.login-html .sign-in-htm{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+
+}
+.login-html .sign-in,
+.login-form .group .check{
+	display:none;
+}
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button{
+	text-transform:uppercase;
+}
+.login-html .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+}
+.login-html .sign-in:checked + .tab{
+	color:white;
+	border-color:#a4303f;
+}
+.login-form{
+	min-height:345px;
+	position:relative;
+}
+.login-form .group{
+	margin-bottom:15px;
+}
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+	width:100%;
+	color:white;
+	display:block;
+}
+.login-form .group .input,
+.login-form .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:4px;
+	background:rgba(255,255,255,.1);
 }
 
-.card{
-    display: flex;
-    grid-area: 2 / 3 / 5 / 4;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    text-align: center;
-    justify-content: center;
-    
-    
-    border-radius: 8px;
-    
+.login-form .group .label{
+	color:white;
+	font-size:12px;
+}
+.login-form .group .button{
+	background:#7d6ca7;
 }
 
-.form {
-    display: grid;
-    grid-template-rows: auto auto auto;
-    grid-gap: 10px;
-    margin: 10px;
-    align-content: center;
-}
-.form > div {
-    padding: 10px;
-}
 
-.copyright-info {
-    grid-area: 6 / 1 / 7 / 4;
-    
+.hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	background: white;
+}
+.foot-lnk{
+	text-align:center;
 }
