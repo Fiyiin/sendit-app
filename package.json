@@ -5,9 +5,10 @@
   "main": "./build/app.js",
   "scripts": {
     "start": "node ./build/app.js --presets env",
-    "test": "npm run build && mocha ./build/test/*.js --exit",
+    "test": "mocha --require babel-register test/**.test.js --exit",
     "build": "babel lib -d build",
     "dev-start": "babel-watch ./lib/app.js"
+  
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,7 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
     "babel-watch": "^2.0.7",
     "chai": "^4.2.0",
     "coveralls": "^3.0.2",
