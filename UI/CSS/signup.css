@@ -4,37 +4,94 @@
 }
 body {
     margin: 0px;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     text-align: center;
-    background-color: coral;
+    background-color: white;
 
 
 }
 
-.grid-container {
-    display: grid;
-    grid-template-rows: repeat(4, 25%);
-    grid-template-columns: repeat(5, 20%);
-    height: 100vh;
-    
+.content {
+display: grid;
+grid-template-areas: 'myArea myArea . . ';
+grid-gap: 10px;
+padding: 10px;
 }
 
-.main { 
-    display: grid;
-    grid-area: 1 / 1 / 6 / 4;
-    align-content: center;
+main {
+grid-area: myArea;
+display: grid;
+grid-template-rows: auto auto auto;
+  }
 
+main > div {
+    font-family: 'Ubuntu', 'sans-sefif';
+    color: #0f0722;
+    font-size: 28px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    align-self: center;
 }
-
-.aside { 
-    display: grid;
-    grid-area: 1 / 4 / 4 / 6;
-    grid-template-columns: 20% 60% 20%
-}
-
 .form {
-    background-color: wheat;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    border-radius: 5px;
+    background-color: #a4303f;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.03);
+    border-bottom: 1px solid #F9F2D6;
+    border-right: 1px solid #F9F2D6;
+    max-width: 320px;
 }
 
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=tel], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #251351;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #a4303f;
+}
