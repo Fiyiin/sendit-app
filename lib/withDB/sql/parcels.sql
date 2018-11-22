@@ -1,5 +1,5 @@
 \c sendit_testdb;
-DROP TABLE parcels;
+DROP TABLE IF EXISTS parcels;
 
 CREATE TABLE IF NOT EXISTS parcels (
   id SERIAL PRIMARY KEY,
