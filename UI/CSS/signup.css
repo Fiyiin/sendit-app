@@ -68,7 +68,7 @@ input{
 	position: relative;
 	width: 100%;
 	outline: none;
-	background: transparent;
+	background: white;
 	height: 45px;
 	font-size: inherit;
 }

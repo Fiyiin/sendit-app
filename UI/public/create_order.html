@@ -10,23 +10,48 @@
 </head>
 
 <body class="grid-container">
-    <div class="middle-column">
-        <div class="welcome">
-        </div>
-        <div class="order-form">
-            <form>
-                <fieldset>
-                    <legend>Create Order</legend>
-                    Package Name: <input type="text"><br>
-                    <textarea name="package description" id="pkg_description" cols="30" rows="10" placeholder="Optional &nrightarrow; Provide a brief description"></textarea><br>
-                    Pickup Location: <input type="text" required><br>
-                    Delivery Location: <input type="text" required><br>
-                    Package Weight: <input type="number" required><br>
-                    <button>OK</button>
-                </fieldset>
+    <div class="fill1"></div>
+    <div class="row">
+        <div class="col-75">
+          <div class="container">
+            <form action="/action_page.php">
+      
+              <div class="row">
+                <div class="col-50">
+                  <h3>Create New Parcel </h3>
+                  <label for="fname"><i class="fa fa-user"></i> Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Crocs">
+                  <label for="email"><i class="fa fa-envelope"></i> Description</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Shoes">
+                  <label for="email"><i class="fa fa-envelope"></i> Pickup Location</label>
+                  <input type="text" id="fname" name="firstname" placeholder="2. Joshua Street, Horeb">
+                  <label for="email"><i class="fa fa-envelope"></i> Delivery Location</label>
+                  <input type="text" id="email" name="email" placeholder="24. Gideon Street, Zion">
+                  <label for="adr"><i class="fa fa-address-card-o"></i> Weight (Kgs)</label>
+                  <input type="text" id="adr" name="address" placeholder="In Kg">
+      
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="state">Receiver's Name:</label>
+                      <input type="text" id="state" name="" placeholder="">
+                    </div>
+                    <div class="col-50">
+                      <label for="zip">Receiver's Tel:</label>
+                      <input type="text" id="zip" name="zip" placeholder="">
+                    </div>
+                  </div>
+                </div>
+      
+      
+              </div>
+              <label>
+              </label>
+              <input type="submit" value="Create Parcel Request Order" class="btn">
             </form>
+          </div>
         </div>
     </div>
+    <div class="fill2"></div>
 
 
 </body>

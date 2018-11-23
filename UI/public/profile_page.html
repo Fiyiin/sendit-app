@@ -9,43 +9,77 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../CSS/profile_page.css" />
 </head>
 
-<body>
-    <div class="content">
-        <nav class="navbar">
-            <a href="../public/index.html"><button id="signout" title="LOGIN" onclick="">SIGNOUT</button></a>
-        </nav>
-        <div class="new"> <button id="btn-new">NEW</button></div>
-        <section>
-            <div class="profile-card">
-                <div></div>
-                <h1>John Doe</h1>
-                <p id="email-ad">johndoe @ johnny.com</p>
-                <p class="p-card">6 Successful Orders</p>
-                <p class="p-card">0 In transit</p>
-                <p><a href="../public/create_order.html"><button class="btn-profile-card">Create New Order</button></a></p>
-            </div>
-        </section>
-        <main>
-            <div class="parcel-card">
-                <div class="card-header">
-                    <span>Title</span>
-                    <span>Created On</span>
-                    <span>Status: IN TRANSIT</span>
-                </div>
-                <div class="card-body">
-                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-                    velit,
-                    sed quia non numquam
-                </div>
-                <div class="card-footer">
-                    <a id="cancel" href="#">Cancel</a> 
-                    <a id="loc" href="#">Change Location</a>
-                </div>
-
-            </div>
-        </main>
-    </div>
-
+<body class="grid-container">
+    <nav class="navbar">
+        <a href="../public/index.html"><button id="signout" title="LOGIN" onclick="">SIGNOUT</button></a>
+    </nav>
+    <section>
+        <div class="profile-card">
+            <h1>John Doe</h1>
+            <p id="email-ad">johndoe @ johnny.com</p>
+            <p class="p-card">6 Successful Orders</p>
+            <p class="p-card">0 In transit</p>
+            <p><a href="../public/create_order.html"><button class="btn-profile-card">Create New Order</button></a></p>
+            <p><a href="../public/manage_orders.html"><button class="btn-profile-card">Manage Orders</button></a></p>
+            <p><a href="../public/admin.html"><button class="btn-profile-card">ADMIN</button></a></p>
+        </div>
+    </section>
+    <main>
+        <div class="order-list">
+            <ol>
+                <li>
+                    <a href="../public/order_detail.html">
+                        <h4>Package Name</h4>
+                    </a>
+                    <p>Qui dolorem ipsum quia dolor sit amet, consectetur nobis est eligendi optio cumque nihil
+                        impedit.</p>
+                </li>
+                <li>
+                    <a href="../public/order_detail.html">
+                        <h4>Package Name</h4>
+                    </a>
+                    <p>Et iusto odio dignissimos ducimus qui blanditiis praesen voluptatum deleniti Itaque earum
+                        rerumsapiente delectus.</p>
+                </li>
+                <li>
+                    <a href="../public/order_detail.html">
+                        <h4>Package Name</h4>
+                    </a>
+                    <p>Dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
+                        ducimus qui blanditiis.</p>
+                    <p>Ut enim ad minima veniam, amet, consectetur, adipisci velit, ducimus qui blanditiis.</p>
+                </li>
+                <li>
+                    <a href="../public/order_detail.html">
+                        <h4>Package Name</h4>
+                    </a>
+                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                        sed quia non numquam.</p>
+                </li>
+                <li>
+                    <a href="../public/order_detail.html">
+                        <h4>Package Name</h4>
+                    </a>
+                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                        sed quia non numquam.</p>
+                </li>
+                <li>
+                    <a href="../public/order_detail.html">
+                        <h4>Package Name</h4>
+                    </a>
+                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                        sed quia non numquam.</p>
+                </li>
+                <li>
+                    <a href="../public/order_detail.html">
+                        <h4>Package Name</h4>
+                    </a>
+                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                        sed quia non numquam.</p>
+                </li>
+            </ol>
+        </div>
+    </main>
 </body>
 
 </html>
