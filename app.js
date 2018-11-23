@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname, 'UI')));
 
 app.use('/api/v1/parcels', parcelRouter);
 app.use('/api/v1/auth', userRouter);
+app.use('/api/v1/users', userRouter);
 
 
 app.listen(port, () => console.log(`app running on ${port}`));
