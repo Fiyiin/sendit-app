@@ -3,8 +3,8 @@ import logger from 'morgan';
 import path from 'path';
 import 'babel-polyfill';
 import bodyParser from 'body-parser';
-import parcelRouter from './withDB/routes/parcels';
-import userRouter from './withDB/routes/users';
+import parcelRouter from './lib/withDB/routes/parcels';
+import userRouter from './lib/withDB/routes/users';
 
 const app = express();
 const port = process.env.PORT || 3000;
